@@ -1,0 +1,64 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3Copyright (C) 2012 The Android Open Source Project
+4
+5Licensed under the Apache License, Version 2.0 (the "License");
+6you may not use this file except in compliance with the License.
+7You may obtain a copy of the License at
+8
+9     http://www.apache.org/licenses/LICENSE-2.0
+10
+11Unless required by applicable law or agreed to in writing, software
+12distributed under the License is distributed on an "AS IS" BASIS,
+13WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14See the License for the specific language governing permissions and
+15limitations under the License.
+16-->
+17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+18    package="com.example.android.fragments"
+19    android:versionCode="1"
+20    android:versionName="1.0" >
+21
+22    <uses-sdk
+23        android:minSdkVersion="14"
+23-->C:\Users\manue\AndroidStudioProjects\HW1_base\app\src\main\AndroidManifest.xml
+24        android:targetSdkVersion="28" />
+24-->C:\Users\manue\AndroidStudioProjects\HW1_base\app\src\main\AndroidManifest.xml
+25
+26    <application
+26-->C:\Users\manue\AndroidStudioProjects\HW1_base\app\src\main\AndroidManifest.xml:21:5-33:19
+27        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+27-->[com.android.support:support-compat:28.0.0] C:\Users\manue\.gradle\caches\transforms-2\files-2.1\49dd2c14dcc57c7f4a0aa1d53483e871\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+28        android:debuggable="true"
+29        android:icon="@drawable/ic_launcher"
+29-->C:\Users\manue\AndroidStudioProjects\HW1_base\app\src\main\AndroidManifest.xml:22:9-45
+30        android:label="@string/app_name"
+30-->C:\Users\manue\AndroidStudioProjects\HW1_base\app\src\main\AndroidManifest.xml:23:9-41
+31        android:testOnly="true" >
+32        <activity
+32-->C:\Users\manue\AndroidStudioProjects\HW1_base\app\src\main\AndroidManifest.xml:24:9-32:20
+33            android:name="com.example.android.fragments.MainActivity"
+33-->C:\Users\manue\AndroidStudioProjects\HW1_base\app\src\main\AndroidManifest.xml:25:13-41
+34            android:label="HW1" >
+34-->C:\Users\manue\AndroidStudioProjects\HW1_base\app\src\main\AndroidManifest.xml:26:13-32
+35            <intent-filter>
+35-->C:\Users\manue\AndroidStudioProjects\HW1_base\app\src\main\AndroidManifest.xml:27:13-31:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->C:\Users\manue\AndroidStudioProjects\HW1_base\app\src\main\AndroidManifest.xml:28:17-69
+36-->C:\Users\manue\AndroidStudioProjects\HW1_base\app\src\main\AndroidManifest.xml:28:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->C:\Users\manue\AndroidStudioProjects\HW1_base\app\src\main\AndroidManifest.xml:30:17-77
+38-->C:\Users\manue\AndroidStudioProjects\HW1_base\app\src\main\AndroidManifest.xml:30:27-74
+39            </intent-filter>
+40        </activity>
+41
+42        <meta-data
+42-->[com.android.support:support-v4:26.0.0-beta1] C:\Users\manue\.gradle\caches\transforms-2\files-2.1\5be510d1a4db634f5ad816b528eba3ba\support-v4-26.0.0-beta1\AndroidManifest.xml:26:9-28:44
+43            android:name="android.support.VERSION"
+43-->[com.android.support:support-v4:26.0.0-beta1] C:\Users\manue\.gradle\caches\transforms-2\files-2.1\5be510d1a4db634f5ad816b528eba3ba\support-v4-26.0.0-beta1\AndroidManifest.xml:27:13-51
+44            android:value="26.0.0-beta1" />
+44-->[com.android.support:support-v4:26.0.0-beta1] C:\Users\manue\.gradle\caches\transforms-2\files-2.1\5be510d1a4db634f5ad816b528eba3ba\support-v4-26.0.0-beta1\AndroidManifest.xml:28:13-41
+45    </application>
+46
+47</manifest>

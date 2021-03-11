@@ -1,0 +1,17 @@
+com/example/android/fragments/FToCFragment.java
+ com.example.android.fragments.FToCFragment
+com/example/android/fragments/CToFFragment.java
+ com.example.android.fragments.CToFFragment
+com/example/android/fragments/BuildConfig.java
+ com.example.android.fragments.BuildConfig
+com/example/android/fragments/ArticleFragment.java
+ com.example.android.fragments.ArticleFragment
+com/example/android/fragments/HelpFragment.java
+ com.example.android.fragments.HelpFragment
+com/example/android/fragments/Ipsum.java
+ com.example.android.fragments.Ipsum
+com/example/android/fragments/HeadlinesFragment.java
+ com.example.android.fragments.HeadlinesFragment
+ com.example.android.fragments.HeadlinesFragment$OnHeadlineSelectedListener
+com/example/android/fragments/MainActivity.java
+ com.example.android.fragments.MainActivity

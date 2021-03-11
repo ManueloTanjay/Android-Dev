@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fahrenheit (symbol F) is a temperature scale based on one proposed in 1724 by the German physicist Daniel Gabriel Fahrenheit (1686 - 1736), after whom the scale is names. Celsius, historically knows as centigrade, [1][2] is a scale and unit of measurement for temperature. As as SI derived unt, it is used by most countries in the world. It is named after teh Swedish astronomer Anders Celcius (1701 - 1744), who developed a similar temperature scale."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
