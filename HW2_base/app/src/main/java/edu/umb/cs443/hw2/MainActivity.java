@@ -12,6 +12,8 @@ import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.util.HashSet;
 import java.util.Random;
 
@@ -22,7 +24,9 @@ public class MainActivity extends Activity {
     Thread X;
     HashSet<Integer> XPositions = new HashSet<Integer>();
     //TextView cells = (TextView)findViewById(R.id.textCell);
+    TextView cells;
     //TextView treasures = (TextView)findViewById(R.id.textTreasure);
+    TextView treasures;
     int cellsCount = 0;
     int treasuresCount = 0;
 
@@ -75,7 +79,7 @@ public class MainActivity extends Activity {
                 int numX = 0;
                 Random rand = new Random();
                 //HashSet<Integer> XPositions = new HashSet<Integer>();
-                while (true) {
+                while (!Thread.currentThread().isInterrupted()) {
                     while (XPositions.size() < 4) {
                         int newPosition = rand.nextInt(25);
                         while (XPositions.contains(newPosition) || tiles[newPosition] == "O") {
@@ -122,7 +126,7 @@ public class MainActivity extends Activity {
                 {
                     try
                     {
-                        Thread.sleep(500);
+                        Thread.sleep(300);
                     } catch (InterruptedException e)
                     {
                         e.printStackTrace();
@@ -138,12 +142,18 @@ public class MainActivity extends Activity {
                     if(XPositions.contains(cury*w+curx))
                     {
                         XPositions.remove(cury*w+curx);
+                        treasuresCount++;
                     }
 
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             ((ArrayAdapter)gridView.getAdapter()).notifyDataSetChanged();
+                            cellsCount++;
+                            cells = (TextView)findViewById(R.id.textCell);
+                            cells.setText(Integer.toString(cellsCount) + " Cells");
+                            treasures = (TextView)findViewById(R.id.textTreasure);
+                            treasures.setText(Integer.toString(treasuresCount) + " Treasures");
                         }
                     });
                 }
@@ -151,7 +161,7 @@ public class MainActivity extends Activity {
                 {
                     try
                     {
-                        Thread.sleep(500);
+                        Thread.sleep(300);
                     } catch (InterruptedException e)
                     {
                         e.printStackTrace();
@@ -167,12 +177,18 @@ public class MainActivity extends Activity {
                     if(XPositions.contains(cury*w+curx))
                     {
                         XPositions.remove(cury*w+curx);
+                        treasuresCount++;
                     }
 
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             ((ArrayAdapter)gridView.getAdapter()).notifyDataSetChanged();
+                            cellsCount++;
+                            cells = (TextView)findViewById(R.id.textCell);
+                            cells.setText(Integer.toString(cellsCount) + " Cells");
+                            treasures = (TextView)findViewById(R.id.textTreasure);
+                            treasures.setText(Integer.toString(treasuresCount) + " Treasures");
                         }
                     });
                 }
@@ -180,7 +196,7 @@ public class MainActivity extends Activity {
                 {
                     try
                     {
-                        Thread.sleep(500);
+                        Thread.sleep(300);
                     } catch (InterruptedException e)
                     {
                         e.printStackTrace();
@@ -196,12 +212,18 @@ public class MainActivity extends Activity {
                     if(XPositions.contains(cury*w+curx))
                     {
                         XPositions.remove(cury*w+curx);
+                        treasuresCount++;
                     }
 
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             ((ArrayAdapter)gridView.getAdapter()).notifyDataSetChanged();
+                            cellsCount++;
+                            cells = (TextView)findViewById(R.id.textCell);
+                            cells.setText(Integer.toString(cellsCount) + " Cells");
+                            treasures = (TextView)findViewById(R.id.textTreasure);
+                            treasures.setText(Integer.toString(treasuresCount) + " Treasures");
                         }
                     });
                 }
@@ -209,7 +231,7 @@ public class MainActivity extends Activity {
                 {
                     try
                     {
-                        Thread.sleep(500);
+                        Thread.sleep(300);
                     } catch (InterruptedException e)
                     {
                         e.printStackTrace();
@@ -224,12 +246,18 @@ public class MainActivity extends Activity {
                     if(XPositions.contains(cury*w+curx))
                     {
                         XPositions.remove(cury*w+curx);
+                        treasuresCount++;
                     }
 
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             ((ArrayAdapter)gridView.getAdapter()).notifyDataSetChanged();
+                            cellsCount++;
+                            cells = (TextView)findViewById(R.id.textCell);
+                            cells.setText(Integer.toString(cellsCount) + " Cells");
+                            treasures = (TextView)findViewById(R.id.textTreasure);
+                            treasures.setText(Integer.toString(treasuresCount) + " Treasures");
                         }
                     });
                 }
@@ -241,8 +269,25 @@ public class MainActivity extends Activity {
 
     }
 
+    public void quit(View view)
+    {
+        this.finish();
+        System.exit(0);
+    }
+
     public void reset(View view){
-        init();
+        //init();
+        X.interrupt();
+        for(int i=0;i<tiles.length;i++) tiles[i]=" ";
+        XPositions.clear();
+
+        curx=r.nextInt(w);
+        cury=r.nextInt(w);
+        X();
+        tiles[cury*w+curx]="O";
+
+
+        ((ArrayAdapter)gridView.getAdapter()).notifyDataSetChanged();
     }
 
     void init(){
@@ -257,6 +302,5 @@ public class MainActivity extends Activity {
 
         ((ArrayAdapter)gridView.getAdapter()).notifyDataSetChanged();
     }
-
 
 }
